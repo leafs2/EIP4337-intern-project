@@ -1,0 +1,39 @@
+{
+  "name": "userop",
+  "version": "0.4.0-beta.5",
+  "description": "A simple JS library for building ERC-4337 UserOperations.",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
+  "repository": "git@github.com:stackup-wallet/userop.js.git",
+  "author": "stackup-wallet",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "yarn clean && tsc",
+    "test": "jest",
+    "lint": "eslint . && tsc --noEmit",
+    "lint:fix": "eslint . --fix",
+    "prettier": "prettier --check '**'",
+    "prettier:fix": "prettier --write '**'"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "jest": "^29.7.0",
+    "nock": "^13.5.4",
+    "prettier": "3.2.5",
+    "rimraf": "^5.0.5",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.4.2",
+    "typescript-eslint": "^7.3.1"
+  },
+  "dependencies": {
+    "abitype": "^1.0.0",
+    "ethers": "^6.11.1",
+    "viem": "^2.9.12"
+  }
+}
